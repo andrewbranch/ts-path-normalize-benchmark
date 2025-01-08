@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "module": "nodenext",
+    "checkJs": true,
+    "noEmit": true,
+    "strict": true,
+    "types": ["node", "ts-expose-internals"],
+    "maxNodeModuleJsDepth": 1
+  }
+}

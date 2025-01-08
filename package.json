@@ -1,0 +1,20 @@
+{
+  "name": "ts-path-normalize-benchmark",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --allow-natives-syntax index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "bench-node": "^0.5.0",
+    "ts-expose-internals": "^5.6.3",
+    "typescript": "^5.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5"
+  }
+}

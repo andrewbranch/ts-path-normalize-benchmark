@@ -1,0 +1,6 @@
+suites/tsserver-startup-vscode-macos.json filter=lfs diff=lfs merge=lfs -text
+suites/tsserver-startup-vscode-windows.json filter=lfs diff=lfs merge=lfs -text
+suites/tsc-vscode-macos.json filter=lfs diff=lfs merge=lfs -text
+suites/tsc-vscode-windows.json filter=lfs diff=lfs merge=lfs -text
+suites/tsserver-edit-vscode-macos.json filter=lfs diff=lfs merge=lfs -text
+suites/tsserver-edit-vscode-windows.json filter=lfs diff=lfs merge=lfs -text
