@@ -40,19 +40,21 @@ export function getNormalizedAbsolutePath(path, currentDirectory) {
   if (rootLength === 0 && currentDirectory) {
       path = combinePaths(currentDirectory, path);
       rootLength = getRootLength(path);
-  } else {
+  }
+  else {
+      // combinePaths normalizes slashes, so not necessary in the other branch
       path = normalizeSlashes(path);
   }
 
   const simpleNormalized = simpleNormalizePath(path);
   if (simpleNormalized !== undefined) {
-      return simpleNormalized;
+      return simpleNormalized.length > rootLength ? removeTrailingDirectorySeparator(simpleNormalized) : simpleNormalized;
   }
 
-  const root = path.substring(0, rootLength);
   const length = path.length;
+  const root = path.substring(0, rootLength);
   // `normalized` is only initialized once `path` is determined to be non-normalized
-  let normalized = undefined;
+  let normalized;
   let index = rootLength;
   let segmentStart = index;
   let normalizedUpTo = index;
